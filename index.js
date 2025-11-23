@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
@@ -13,4 +12,5 @@ client.on('messageCreate', message => {
     if(message.content === "!ping") message.reply("Pong!");
 });
 
+// GitHub Actions Secret'i burada kullan
 client.login(process.env.TOKEN).catch(err => console.error("Token hatalı veya bot ekli değil:", err));
